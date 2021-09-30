@@ -438,6 +438,14 @@ MonoBehaviour:
   - {fileID: 2939404697341093321, guid: f8e05f7ff94fe344b832de6e97e7f1c6, type: 3}
   startRoom:
   - {fileID: 2425285753868865160, guid: c361bf9dba7f0484cb9eb2d96045eeca, type: 3}
+  bottomBlockade:
+  - {fileID: 4188294227659590310, guid: 5099fddd0c0b8e84ab165a10d0e1571c, type: 3}
+  topBlockade:
+  - {fileID: 3151067776512718486, guid: cba32159a00cf9e4db484b821334661a, type: 3}
+  leftBlockade:
+  - {fileID: 2408430735289372392, guid: 61b83f9fec31d1d48816a74116862e2d, type: 3}
+  rightBlockade:
+  - {fileID: 4987562108697895513, guid: 00ba22c4fcf7dec48b51dfd73a0a7ebc, type: 3}
 --- !u!4 &2074857548
 Transform:
   m_ObjectHideFlags: 0

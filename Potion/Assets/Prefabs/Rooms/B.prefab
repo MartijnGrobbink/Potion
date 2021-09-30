@@ -589,6 +589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDirection: 2
+  spawned: 0
 --- !u!54 &3800496934728073563
 Rigidbody:
   m_ObjectHideFlags: 0
