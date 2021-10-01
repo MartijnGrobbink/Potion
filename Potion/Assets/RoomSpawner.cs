@@ -5,6 +5,7 @@ using UnityEngine;
 public class RoomSpawner : MonoBehaviour
 {
     public int openingDirection;
+    public int destroy;
     //1 need bottom door
     //2 need top door
     //3 need left door
@@ -19,7 +20,7 @@ public class RoomSpawner : MonoBehaviour
     void Start(){
 
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
-        Invoke("Spawn", 0.1f);
+        Invoke("Spawn", 0.4f);
     }
     void Spawn(){
         if(spawned == false){
@@ -46,8 +47,13 @@ public class RoomSpawner : MonoBehaviour
         }
     }
     void OnTriggerEnter(Collider other){
-        if(other.CompareTag("SpawnPoint") && other.GetComponent<RoomSpawner>().spawned == true){
-            Destroy(gameObject);
+        if(other.CompareTag("SpawnPoint") && spawned == false){
+            if (other.GetComponent<RoomSpawner>().spawned == true){
+            Destroy(gameObject);}
+                if(other.GetComponent<RoomSpawner>().spawned == false){
+                Instantiate(templates.blockade, transform.position, templates.blockade.transform.rotation);
+                Destroy(gameObject);
+            }
         }
     }
 }
