@@ -40,10 +40,21 @@ public class RoomSpawner : MonoBehaviour
                 // Need to spawn a room with RIGHT door   
                 rand = Random.Range(0, templates.rightRooms.Length);
                 Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);     
-            } else if(openingDirection == 5){
-                Instantiate(templates.startRoom[0], transform.position, templates.startRoom[0].transform.rotation);
             }
             spawned = true; 
+        }
+    }
+        void Update(){
+    //create spawn check if there is a reset if so then reset the spawned to false
+    //this is so after an reset the spawn can be created again if this is not done spawn will stay true and no new dungeon will be generated
+    if(openingDirection == 5){
+        if(spawned == false){
+        Instantiate(templates.startRoom[0], transform.position, templates.startRoom[0].transform.rotation);
+        spawned = true;
+        }
+            else if(templates.reset == true){
+                spawned = false;
+            }
         }
     }
     void OnTriggerEnter(Collider other){
