@@ -18,7 +18,9 @@ public class RoomSpawner : MonoBehaviour
     public bool spawned = false;
 
     void Start(){
-
+        //find room templates the place where you can find all the room presets
+        //start the spawn with and 0.3 seconds of delay so the collisions can check what they collide with
+        //if other is not found increase the delay
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
         Invoke("Spawn", 0.4f);
     }
@@ -39,29 +41,28 @@ public class RoomSpawner : MonoBehaviour
             } else if(openingDirection == 4){
                 // Need to spawn a room with RIGHT door   
                 rand = Random.Range(0, templates.rightRooms.Length);
-                Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);     
-            }
+                Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);
+            }     
+            //set spawned true so the code doesn't spawn more rooms
             spawned = true; 
         }
     }
-        void Update(){
-    //create spawn check if there is a reset if so then reset the spawned to false
-    //this is so after an reset the spawn can be created again if this is not done spawn will stay true and no new dungeon will be generated
-    if(openingDirection == 5){
-        if(spawned == false){
-        Instantiate(templates.startRoom[0], transform.position, templates.startRoom[0].transform.rotation);
-        spawned = true;
-        }
-            else if(templates.reset == true){
-                spawned = false;
-            }
+    void Update(){
+        //if the dungeon is generated and there are no reset going on delete this object
+        //we do this as a clean up to prevent lagg as otherwise we have collision boxes and scripts running while it's not needed
+        //the only object we are going to keep is the spawn for later generation
+        if(templates.roomsGenerated == true && templates.reset != true){
+            Destroy(gameObject);
         }
     }
+    //this is to check if there is already a existing room on the place you want to spawn a room
+    //if this is true delete this spawn object so there are no rooms spawned in already existing rooms
     void OnTriggerEnter(Collider other){
         if(other.CompareTag("SpawnPoint") && spawned == false){
-            if (other.GetComponent<RoomSpawner>().spawned == true){
+            if(other.GetComponent<RoomSpawner>().spawned == true){
             Destroy(gameObject);}
-                if(other.GetComponent<RoomSpawner>().spawned == false){
+            //this checks if there are 2 spawnpoint that want to spawn a room in the same spot delete both spawnpoints and blockade that spot
+            if(other.GetComponent<RoomSpawner>().spawned == false){
                 Instantiate(templates.blockade, transform.position, templates.blockade.transform.rotation);
                 Destroy(gameObject);
             }

@@ -8,6 +8,7 @@ TagManager:
   - Rooms
   - Blockade
   - Wall
+  - Hallway
   layers:
   - Default
   - TransparentFX

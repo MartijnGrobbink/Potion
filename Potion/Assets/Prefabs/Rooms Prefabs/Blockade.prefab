@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 6492229104421294913}
   - component: {fileID: 8363961285672875433}
   - component: {fileID: 6983102473472710124}
-  - component: {fileID: -3955466496693922957}
+  - component: {fileID: -4293361608015997}
   m_Layer: 0
   m_Name: Blockade
   m_TagString: Untagged
@@ -396,7 +396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Walls: {fileID: 1493451889358300752}
---- !u!114 &-3955466496693922957
+--- !u!114 &-4293361608015997
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
