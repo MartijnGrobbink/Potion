@@ -132,9 +132,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 681407236}
+  - component: {fileID: 681407237}
   m_Layer: 0
   m_Name: MonsterManager
-  m_TagString: Untagged
+  m_TagString: MonsterManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,12 +148,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 681407235}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.101065, y: 13.084409, z: 39.708107}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &681407237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681407235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95db87aba23dbfc48a5597498eaf2a8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level1Monsters:
+  - {fileID: 6003768986839742619, guid: 2cc88eab40bd545448e46a229ec2ad5b, type: 3}
+  - {fileID: 8226472331796920052, guid: eff2bb31dfde1df4cbaeef364402e519, type: 3}
+  - {fileID: 4250218089514987220, guid: cb1bf76cd7e6ed6418ee3a0260f46281, type: 3}
+  - {fileID: 8979356069775593632, guid: 51a6413586436284a9aa29917cdcccb7, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +262,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &743196693
 GameObject:
@@ -328,7 +346,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!54 &743196697
 Rigidbody:
@@ -362,6 +380,7 @@ GameObject:
   - component: {fileID: 1275846177}
   - component: {fileID: 1275846176}
   - component: {fileID: 1275846178}
+  - component: {fileID: 1275846179}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -459,7 +478,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1275846176
 MonoBehaviour:
@@ -476,6 +495,7 @@ MonoBehaviour:
   horizontal: Horizontal
   vertical: Vertical
   fireButton: 
+  collisionDirection: 0
 --- !u!114 &1275846177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,9 +513,7 @@ MonoBehaviour:
   movementBlockMask:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 0
+  myTransform: {fileID: 0}
 --- !u!65 &1275846178
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -504,11 +522,29 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275846170}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1275846179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275846170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a71152ff6e89bcb4092f58f8c00c2fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInput: {fileID: 0}
+  collisionX: 0
+  collisionNegX: 0
+  collisionZ: 0
+  collisionNegZ: 0
+  collisionDirection: 0
 --- !u!1 &1499874095
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +644,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 30, y: 180, z: 0}
 --- !u!1 &2074857546
 GameObject:
@@ -676,7 +712,7 @@ MonoBehaviour:
   rooms: []
   waitTime: 1
   boss: {fileID: 7652861090691111449, guid: ee3ce700f4c73e347842ce924703d08c, type: 3}
-  minRooms: 20
+  minRooms: 0
   reset: 0
   roomsGenerated: 0
 --- !u!4 &2074857548

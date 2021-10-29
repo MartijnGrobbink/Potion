@@ -6,9 +6,9 @@ TagManager:
   tags:
   - SpawnPoint
   - Rooms
-  - Blockade
   - Wall
   - Hallway
+  - MonsterManager
   layers:
   - Default
   - TransparentFX

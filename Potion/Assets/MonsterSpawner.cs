@@ -5,14 +5,29 @@ using UnityEngine;
 public class MonsterSpawner : MonoBehaviour
 {
 private RoomData data;
+private MonsterManager monsterManager;
+
+private GameObject monster;
+private float randX;
+private float randZ;
+private float randAmount;
+private int randMonster;
+
 void Start(){
-    data = GetComponent<RoomData>();
-    data.monsters.Add(this.gameObject);  
+    Invoke("MonsterSpawning", 0.4f);
+    data = this.GetComponent<RoomData>();
+    monsterManager = GameObject.FindGameObjectWithTag("MonsterManager").GetComponent<MonsterManager>();  
+    randAmount = Random.Range(3, 5);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+void MonsterSpawning(){
+    for(int i = 0; i < randAmount; i++){
+        randX = Random.Range(-9, 9);
+        randZ = Random.Range(-9, 9);
+        randMonster = Random.Range(0, monsterManager.level1Monsters.Length);
+        monster = Instantiate(monsterManager.level1Monsters[randMonster], transform.position + new Vector3 (randX, 0 , randZ), Quaternion.identity);
+        monster.transform.SetParent(this.transform, true);
+        data.monsterlist.Add(monster);
+        }
     }
 }

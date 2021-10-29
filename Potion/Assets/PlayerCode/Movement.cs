@@ -17,18 +17,13 @@ public class Movement : MonoBehaviour
 
 	Vector3 direction;
 	Vector3 lastDirection;
-	Vector3 wallPosition;
-	Vector3 playerPosition;
-	Vector3 wallLocation;
 
 	private Vector2 currentRotation;
 	public float sensitivity = 10f;
 
 	[SerializeField]
 	LayerMask movementBlockMask;
-	Transform myTransform;
-
-	public LayerMask m_LayerMask;
+	public Transform myTransform;
 
 	public UnityAction onStopMove;
 	public UnityAction onMove;
@@ -64,18 +59,6 @@ public class Movement : MonoBehaviour
 		speed += modifiers.speed;
 	}
 */
-void OnTriggerEnter(Collider other){
-if (other.CompareTag("Wall"))
-		{
-			playerPosition = myTransform.transform.position;
-			wallPosition = other.transform.position;
-			wallLocation = wallPosition - playerPosition;
-			Debug.Log(wallLocation);
-			if(wallPosition.x >= playerPosition.x){
-				Debug.Log("test");
-			}
-		}
-}
 	private void ApplyMovement()
 	{
 		if (this.direction == Vector3.zero)
@@ -93,9 +76,6 @@ if (other.CompareTag("Wall"))
 	public void Move(Vector3 direction)
 	{
 		transform.position += direction * speed;
-		//currentRotation.x += Input.GetAxis("Mouse X") * sensitivity;
-		//currentRotation.x = Mathf.Repeat(currentRotation.x, 360);
-		//transform.rotation = Quaternion.Euler(0,currentRotation.x,0);
 	}
 
 	public bool IsMoving()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoomData : MonoBehaviour
 {
-    public List<GameObject> monsters;
+    public List<GameObject> monsterlist;
     // Start is called before the first frame update
     void Start()
     {

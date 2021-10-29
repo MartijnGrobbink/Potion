@@ -16,20 +16,16 @@ public class PlayerInput : MonoBehaviour
 	//float maxHealth = 100;
 	//Health health;
 	Movement movement;
+	PlayerCollision playerCollision;
 	//public UnityAction onFire;
 	//CameraManager cameraManager;
 
 	private void Start()
 	{
 		movement = GetComponent<Movement>();
+		playerCollision = GetComponent<PlayerCollision>();
 		movement.SpeedModifier = 1;
 		
-		//cameraManager = FindObjectOfType<CameraManager>();
-		//health = GetComponent<Health>();
-		//health.MaxHealth = maxHealth;
-		//health.onDie += Die;
-		// Tell the CameraManager that we're going to be followed
-		//cameraManager.AddPlayer(transform);
 	}
 
 	// Update is called once per frame
@@ -40,10 +36,26 @@ public class PlayerInput : MonoBehaviour
 		//Fire();
 	}
 
-	private void Move()
-	{
+	public void Move()
+	{	
 		float x = Input.GetAxis(horizontal);
 		float z = Input.GetAxis(vertical);
+		if(playerCollision.collisionDirection == PlayerCollision.CollisionDirection.Right && x > 0)
+		{
+			x = 0;
+		}
+		if(playerCollision.collisionDirection == PlayerCollision.CollisionDirection.Left && x < 0)
+		{
+			x = 0;
+		}
+		if(playerCollision.collisionDirection == PlayerCollision.CollisionDirection.Front && z > 0)
+		{
+			z = 0;
+		}
+		if(playerCollision.collisionDirection == PlayerCollision.CollisionDirection.Back && z < 0)
+		{
+			z = 0;
+		}
 		movement.Move(new Vector3(x, 0, z));
 	}
 	/*private void Fire()
