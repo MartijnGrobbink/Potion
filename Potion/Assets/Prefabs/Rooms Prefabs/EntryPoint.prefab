@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 8678648797090005965}
   - component: {fileID: 192119634734330467}
   - component: {fileID: 5202156361057731269}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 962625904707547256}
   - component: {fileID: 8685357262833297546}
   - component: {fileID: 934847512342983243}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 3658804344224836058}
   - component: {fileID: 2572710003021275880}
   - component: {fileID: 8616859677099423913}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (8)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -522,7 +522,7 @@ GameObject:
   - component: {fileID: 7918127150229201751}
   - component: {fileID: 9086147777037462652}
   - component: {fileID: 4083047399610399395}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (6)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -694,7 +694,7 @@ GameObject:
   - component: {fileID: 8221596465111038011}
   - component: {fileID: 4320067094550215793}
   - component: {fileID: 8465260520902346275}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -789,7 +789,7 @@ GameObject:
   - component: {fileID: 5060206025551348792}
   - component: {fileID: 74723627484966043}
   - component: {fileID: 5012953774998203432}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (7)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1056,7 +1056,7 @@ GameObject:
   - component: {fileID: 3819941418396611376}
   - component: {fileID: 2864288178284026596}
   - component: {fileID: 330151939332657569}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1151,7 +1151,7 @@ GameObject:
   - component: {fileID: 2090460485965131658}
   - component: {fileID: 1664174096011706171}
   - component: {fileID: 7373372306760766771}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}

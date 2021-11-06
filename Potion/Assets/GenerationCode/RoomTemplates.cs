@@ -62,7 +62,7 @@ public class RoomTemplates : MonoBehaviour
             if(GameObject.FindGameObjectsWithTag("SpawnPoint").Length == 0){
                 Instantiate(startRoom, transform.position, Quaternion.identity);
             }
-            }
+        }
         //if there is some how removed items are in the list of room then remove those list items
         for(var i = rooms.Count - 1; i > -1; i--){
             if (rooms[i] == null)
