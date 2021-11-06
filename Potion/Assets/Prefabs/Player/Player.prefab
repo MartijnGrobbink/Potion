@@ -112,7 +112,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.02
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
@@ -240,10 +240,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwPower: 2
-  maxThrowPower: 10
-  minThrowPower: 2
   rotationSpeed: 5
-  Potion: {fileID: 4708535574555677218, guid: 1c8bd09d461de6746aad5025fa256971, type: 3}
+  Potion: {fileID: 8058056126746547761, guid: f63caa3c5c77e144eb67736f730585a5, type: 3}
   ThrowPoint: {fileID: 1702455074155072289}
 --- !u!120 &6342209843558139558
 LineRenderer:

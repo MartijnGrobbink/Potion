@@ -477,6 +477,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1702455073906353556, guid: b4dc8b1f8286dca4b9ab5e4ffc0e2287, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702455073906353558, guid: b4dc8b1f8286dca4b9ab5e4ffc0e2287, type: 3}
+      propertyPath: speed
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 1702455073906353576, guid: b4dc8b1f8286dca4b9ab5e4ffc0e2287, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -520,6 +528,10 @@ PrefabInstance:
     - target: {fileID: 1702455073906353576, guid: b4dc8b1f8286dca4b9ab5e4ffc0e2287, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702455073906353580, guid: b4dc8b1f8286dca4b9ab5e4ffc0e2287, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1702455073906353581, guid: b4dc8b1f8286dca4b9ab5e4ffc0e2287, type: 3}
       propertyPath: m_Name

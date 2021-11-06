@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - Hallway
   - MonsterManager
+  - AOE
   layers:
   - Default
   - TransparentFX
