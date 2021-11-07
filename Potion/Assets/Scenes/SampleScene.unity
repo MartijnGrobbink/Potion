@@ -539,7 +539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1702455074155072289, guid: b4dc8b1f8286dca4b9ab5e4ffc0e2287, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4460994834283760498, guid: b4dc8b1f8286dca4b9ab5e4ffc0e2287, type: 3}
       propertyPath: CollisionLayer.m_Bits
