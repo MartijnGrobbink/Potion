@@ -10,6 +10,7 @@ TagManager:
   - Hallway
   - MonsterManager
   - AOE
+  - Enemy
   layers:
   - Default
   - TransparentFX
