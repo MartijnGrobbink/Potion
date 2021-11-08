@@ -678,6 +678,8 @@ GameObject:
   - component: {fileID: -8791090806447309569}
   - component: {fileID: -8170681498538641618}
   - component: {fileID: -6133633199207323114}
+  - component: {fileID: -4827014116308977774}
+  - component: {fileID: -4973212822481421092}
   m_Layer: 0
   m_Name: LR
   m_TagString: Untagged
@@ -739,6 +741,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterlist: []
+--- !u!114 &-4827014116308977774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5043193588331909559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!114 &-4973212822481421092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5043193588331909559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605cf3d411a59a64fa3571f780cf5e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaces:
+  - {fileID: -4827014116308977774}
+  objectsToRotate: []
 --- !u!1 &5417514995617928701
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,12 +797,12 @@ GameObject:
   - component: {fileID: 4793110954543464411}
   - component: {fileID: 6399673220328961931}
   - component: {fileID: 6775370738111297978}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &8846639540280639131
 Transform:

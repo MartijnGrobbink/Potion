@@ -147,6 +147,8 @@ GameObject:
   m_Component:
   - component: {fileID: 64269948980368393}
   - component: {fileID: 2979676986880911875}
+  - component: {fileID: -8432979086386153813}
+  - component: {fileID: -3527710553220459904}
   m_Layer: 0
   m_Name: EntryPoint
   m_TagString: Untagged
@@ -186,6 +188,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d42d3d511a904894ebfa793544d279bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8432979086386153813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2425285753868865160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!114 &-3527710553220459904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2425285753868865160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605cf3d411a59a64fa3571f780cf5e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaces:
+  - {fileID: -8432979086386153813}
+  objectsToRotate: []
 --- !u!1 &2532034920565044812
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,12 +1007,12 @@ GameObject:
   - component: {fileID: 791645463873967683}
   - component: {fileID: 1255020154572172924}
   - component: {fileID: 740096587717305641}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &3780882430026988699
 Transform:

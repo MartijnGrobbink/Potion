@@ -583,12 +583,12 @@ GameObject:
   - component: {fileID: 488945954548854494}
   - component: {fileID: 7978309300704602867}
   - component: {fileID: 1051599554910293610}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &8167875607713365579
 Transform:
@@ -773,6 +773,8 @@ GameObject:
   - component: {fileID: 742739473718058727}
   - component: {fileID: -7409022551248798879}
   - component: {fileID: 3328183637290522231}
+  - component: {fileID: -2715173943157051766}
+  - component: {fileID: -5256891105553400002}
   m_Layer: 0
   m_Name: TL
   m_TagString: Untagged
@@ -834,6 +836,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterlist: []
+--- !u!114 &-2715173943157051766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6704933579605360126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!114 &-5256891105553400002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6704933579605360126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605cf3d411a59a64fa3571f780cf5e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaces:
+  - {fileID: -5789656150476032877, guid: 0d17fdff145665b4e86c119c0823fbb6, type: 3}
+  objectsToRotate: []
 --- !u!1 &8247762258385580651
 GameObject:
   m_ObjectHideFlags: 0

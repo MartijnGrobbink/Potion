@@ -126,12 +126,12 @@ GameObject:
   - component: {fileID: 7814996423750064909}
   - component: {fileID: 8123705163542258403}
   - component: {fileID: 6576473043586015605}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7430156077961709276
 Transform:
@@ -221,6 +221,8 @@ GameObject:
   - component: {fileID: 4975689736633719497}
   - component: {fileID: -8427401217988157772}
   - component: {fileID: -4806544496408160244}
+  - component: {fileID: -6102296672510635342}
+  - component: {fileID: -653613032861110714}
   m_Layer: 0
   m_Name: TR
   m_TagString: Untagged
@@ -282,6 +284,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterlist: []
+--- !u!114 &-6102296672510635342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943729704810567578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!114 &-653613032861110714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943729704810567578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605cf3d411a59a64fa3571f780cf5e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaces:
+  - {fileID: -6102296672510635342}
+  objectsToRotate: []
 --- !u!1 &1951152578539845480
 GameObject:
   m_ObjectHideFlags: 0

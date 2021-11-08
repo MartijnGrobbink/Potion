@@ -333,6 +333,8 @@ GameObject:
   m_Component:
   - component: {fileID: 305620170445393540}
   - component: {fileID: -8044758659190786624}
+  - component: {fileID: -6803488613007736930}
+  - component: {fileID: 2871905309937867350}
   m_Layer: 0
   m_Name: BL hall
   m_TagString: Hallway
@@ -370,6 +372,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d42d3d511a904894ebfa793544d279bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6803488613007736930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285079426616499327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!114 &2871905309937867350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285079426616499327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605cf3d411a59a64fa3571f780cf5e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaces:
+  - {fileID: -6803488613007736930}
+  objectsToRotate: []
 --- !u!1 &1702004124373135889
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,12 +1474,12 @@ GameObject:
   - component: {fileID: 2038775382006545314}
   - component: {fileID: 3803213502231422667}
   - component: {fileID: 7533515450753636475}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2124456898077717865
 Transform:
@@ -1523,12 +1569,12 @@ GameObject:
   - component: {fileID: 3947988528350142219}
   - component: {fileID: 7396233167001124040}
   - component: {fileID: 2090211618877710952}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1849529380130763880
 Transform:

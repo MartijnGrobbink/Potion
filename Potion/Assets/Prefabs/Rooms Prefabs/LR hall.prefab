@@ -902,12 +902,12 @@ GameObject:
   - component: {fileID: 6427418673804348088}
   - component: {fileID: 4856708737630667496}
   - component: {fileID: 5021718057424882905}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7022195886701710328
 Transform:
@@ -1090,6 +1090,8 @@ GameObject:
   m_Component:
   - component: {fileID: 220686010437789148}
   - component: {fileID: -6493640976952226548}
+  - component: {fileID: 6046080041974021871}
+  - component: {fileID: 8722958742860455761}
   m_Layer: 0
   m_Name: LR hall
   m_TagString: Hallway
@@ -1127,6 +1129,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d42d3d511a904894ebfa793544d279bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6046080041974021871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6794612317486556372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!114 &8722958742860455761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6794612317486556372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605cf3d411a59a64fa3571f780cf5e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaces:
+  - {fileID: 6046080041974021871}
+  objectsToRotate: []
 --- !u!1 &6903333687201503489
 GameObject:
   m_ObjectHideFlags: 0

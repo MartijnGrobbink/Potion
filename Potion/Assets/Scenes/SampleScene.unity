@@ -108,7 +108,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 0
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -376,7 +376,7 @@ GameObject:
   - component: {fileID: 1499874098}
   - component: {fileID: 1499874097}
   - component: {fileID: 1499874096}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,9 +537,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1702455073906353581, guid: b4dc8b1f8286dca4b9ab5e4ffc0e2287, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1702455074155072289, guid: b4dc8b1f8286dca4b9ab5e4ffc0e2287, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702455074155072290, guid: b4dc8b1f8286dca4b9ab5e4ffc0e2287, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4460994834283760498, guid: b4dc8b1f8286dca4b9ab5e4ffc0e2287, type: 3}
       propertyPath: CollisionLayer.m_Bits

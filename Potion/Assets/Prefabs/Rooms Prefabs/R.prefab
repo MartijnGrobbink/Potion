@@ -410,6 +410,8 @@ GameObject:
   - component: {fileID: -3427681980799868984}
   - component: {fileID: 8318137518859326965}
   - component: {fileID: 8439202877679331428}
+  - component: {fileID: -9037100588389230504}
+  - component: {fileID: -1396545876895627369}
   m_Layer: 0
   m_Name: R
   m_TagString: Untagged
@@ -470,6 +472,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterlist: []
+--- !u!114 &-9037100588389230504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4304205729141335306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!114 &-1396545876895627369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4304205729141335306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605cf3d411a59a64fa3571f780cf5e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaces:
+  - {fileID: -9037100588389230504}
+  objectsToRotate: []
 --- !u!1 &8428330487280062373
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,12 +623,12 @@ GameObject:
   - component: {fileID: 3857743570522258898}
   - component: {fileID: 7160187941929622166}
   - component: {fileID: 5592901730990011953}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4924281306336514242
 Transform:

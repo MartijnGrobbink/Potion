@@ -372,6 +372,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4965424002021502308}
   - component: {fileID: 2549324331900296277}
+  - component: {fileID: -3120705811196198389}
+  - component: {fileID: 200960075016064011}
   m_Layer: 0
   m_Name: TB hall
   m_TagString: Hallway
@@ -409,6 +411,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d42d3d511a904894ebfa793544d279bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3120705811196198389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649886354142904470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!114 &200960075016064011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649886354142904470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605cf3d411a59a64fa3571f780cf5e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaces:
+  - {fileID: -3120705811196198389}
+  objectsToRotate: []
 --- !u!1 &2251362326085275421
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,12 +467,12 @@ GameObject:
   - component: {fileID: 5436147931309362470}
   - component: {fileID: 197746729696557988}
   - component: {fileID: 5213106175227711661}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1401502093302977044
 Transform:
