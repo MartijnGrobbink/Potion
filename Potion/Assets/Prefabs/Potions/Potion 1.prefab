@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 1440529933420353454}
   - component: {fileID: 7492382767402805431}
   - component: {fileID: 3314382438852971075}
+  - component: {fileID: 5258651289114551564}
   m_Layer: 0
   m_Name: AreaOfEffect
   m_TagString: AOE
@@ -4899,6 +4900,20 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &5258651289114551564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3106576756142433904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0c0ef0f38926a4ca0130f2e81f9bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  potion: {fileID: 8058056126746547761}
+  invTime: 1
 --- !u!1 &5181244164221791264
 GameObject:
   m_ObjectHideFlags: 0
@@ -5039,5 +5054,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PotionSprite: {fileID: 1958462562698595576}
   AreaOfEffect: {fileID: 3106576756142433904}
-  damage: 10
+  damage: 2
   duration: 10

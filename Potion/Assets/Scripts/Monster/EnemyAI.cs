@@ -14,6 +14,8 @@ public class EnemyAI : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
+    public float health;
+
     //Patroling
     public Vector3 walkPoint;
     bool walkPointSet;
@@ -95,5 +97,15 @@ public class EnemyAI : MonoBehaviour
     private void ResetAttack()
     {
         alreadyAttacked = false;
+    }
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if(health <= 0) Invoke(nameof(DestoryEnemy), 0.5f);
+    }
+
+    private void DestoryEnemy()
+    {
+        Destroy(gameObject);
     }
 }

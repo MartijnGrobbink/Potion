@@ -9,7 +9,7 @@ public class Potion : MonoBehaviour
     public GameObject PotionSprite;
     public GameObject AreaOfEffect;
 
-    public float damage;
+    public int damage;
     public float duration;
 
     bool broken;
@@ -43,8 +43,4 @@ public class Potion : MonoBehaviour
             broken = true;
         }  
     }
-    //void OnTriggerStay(Collision other)
-    //{
-        //if(other.gameObject.tag)
-    //}
 }
