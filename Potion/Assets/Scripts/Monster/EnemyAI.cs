@@ -14,7 +14,12 @@ public class EnemyAI : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
+    public Animator animator;
+    public HealthBar healthBar;
+
+    public float maxhealth  ;
     public float health;
+    public float attackdamage;
 
     //Patroling
     public Vector3 walkPoint;
@@ -27,24 +32,31 @@ public class EnemyAI : MonoBehaviour
 
     //States
     public float sightRange, attackRange;
-    public bool playerInSightRange, playerInAttackRange;
+    public bool playerInSightRange, playerInAttackRange, enemyDeath;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectsWithTag("Player")[0].transform;
         agent = GetComponent<NavMeshAgent>();
+        animator = gameObject.GetComponent<Animator>();
+
+        health = maxhealth;
+        healthBar.SetMaxHealth(maxhealth);
     }
 
     // Update is called once per frame
     void Update()
     {
+        healthBar.SetHealth(health);
+
         //check if player is in attack range or in sight range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        if(!playerInSightRange && !playerInAttackRange) Patroling();
-        if(playerInSightRange && !playerInAttackRange) ChasePlayer();
-        if(playerInSightRange && playerInAttackRange) AttackPlayer();
+        if(!playerInSightRange && !playerInAttackRange && !enemyDeath) Patroling();
+        if(playerInSightRange && !playerInAttackRange && !enemyDeath) ChasePlayer();
+        if(playerInSightRange && playerInAttackRange && !enemyDeath) AttackPlayer();
+        if(enemyDeath) EnemyDeath();
     }
 
     private void Patroling()
@@ -92,6 +104,7 @@ public class EnemyAI : MonoBehaviour
         {
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            player.GetComponent<Health>().damage = attackdamage;
         }
     }
     private void ResetAttack()
@@ -101,7 +114,15 @@ public class EnemyAI : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        if(health <= 0) Invoke(nameof(DestoryEnemy), 0.5f);
+        if(health <= 0) enemyDeath = true;
+    }
+    
+    private void EnemyDeath()
+    {
+        transform.position = new Vector3(transform.position.x, transform.position.y -transform.localScale.y / 2, transform.position.z);
+        agent.SetDestination(transform.position);
+        animator.SetTrigger("Death");
+        Invoke(nameof(DestoryEnemy), 4f);
     }
 
     private void DestoryEnemy()

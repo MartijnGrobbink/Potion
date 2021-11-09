@@ -55,6 +55,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -156,6 +157,9 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
+  animator: {fileID: 0}
+  healthBar: {fileID: 0}
+  maxhealth: 100
   health: 100
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
@@ -164,3 +168,4 @@ MonoBehaviour:
   attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
+  enemyDeath: 0

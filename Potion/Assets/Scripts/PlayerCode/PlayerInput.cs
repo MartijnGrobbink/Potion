@@ -58,36 +58,37 @@ public class PlayerInput : MonoBehaviour
 			z = 0;
 		}
 
-
-
-		if(playerCollision.collisionDirection == PlayerCollision.CollisionDirection.FR && x > 0 && z > 0 
-		|| playerCollision.collisionDirection == PlayerCollision.CollisionDirection.FR && x > 0 
-		|| playerCollision.collisionDirection == PlayerCollision.CollisionDirection.FR && z > 0)
+		if(playerCollision.collisionDirection == PlayerCollision.CollisionDirection.FR)
 		{
-			x = 0;
-			z = 0;
+			if(x > 0 && z > 0 || x > 0 || z > 0)
+			{			
+				x = 0;
+				z = 0;
+			}
 		}
-		if(playerCollision.collisionDirection == PlayerCollision.CollisionDirection.FL && x < 0 && z > 0
-		||playerCollision.collisionDirection == PlayerCollision.CollisionDirection.FL && x < 0
-		||playerCollision.collisionDirection == PlayerCollision.CollisionDirection.FL && z > 0)
+		if(playerCollision.collisionDirection == PlayerCollision.CollisionDirection.FL)
 		{
-			x = 0;
-			z = 0;
+			if(x < 0 && z > 0 || x < 0 || z > 0)
+			{			
+				x = 0;
+				z = 0;
+			}
 		}
-		if(playerCollision.collisionDirection == PlayerCollision.CollisionDirection.BR && x > 0 && z < 0
-		||playerCollision.collisionDirection == PlayerCollision.CollisionDirection.BR && x > 0
-		||playerCollision.collisionDirection == PlayerCollision.CollisionDirection.BR && z < 0)
+		if(playerCollision.collisionDirection == PlayerCollision.CollisionDirection.BR)
 		{
-			x = 0;
-			z = 0;
+			if(x > 0 && z < 0 || x > 0 || z < 0)
+			{			
+				x = 0;
+				z = 0;
+			}
 		}
-		if(playerCollision.collisionDirection == PlayerCollision.CollisionDirection.BL && x < 0 && z < 0
-		||playerCollision.collisionDirection == PlayerCollision.CollisionDirection.BL && x < 0
-		||playerCollision.collisionDirection == PlayerCollision.CollisionDirection.BL && z < 0)
+		if(playerCollision.collisionDirection == PlayerCollision.CollisionDirection.BL)
 		{
-			x = 0;
-			z = 0;
-
+			if(x < 0 && z < 0 || x < 0 || z < 0)
+			{			
+				x = 0;
+				z = 0;
+			}
 		} 
 		movement.Move(new Vector3(x, 0, z));
 	}

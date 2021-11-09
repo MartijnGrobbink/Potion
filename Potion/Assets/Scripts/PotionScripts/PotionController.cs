@@ -9,7 +9,8 @@ public class PotionController : MonoBehaviour
 
     public GameObject Potion;
     public Transform ThrowPoint;
-    
+    public float throwDelayTime;
+    float timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +25,14 @@ public class PotionController : MonoBehaviour
         
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles +
         new Vector3(0, HorizontalRotation * rotationSpeed, VerticalRotation * rotationSpeed));
-
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        if(timer <= 0)
         {
-            GameObject CreatedPotion = Instantiate(Potion, ThrowPoint.position, ThrowPoint.rotation);
-            CreatedPotion.GetComponent<Rigidbody>().velocity = ThrowPoint.transform.up * throwPower;
-        }
+            if(Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                GameObject CreatedPotion = Instantiate(Potion, ThrowPoint.position, ThrowPoint.rotation);
+                CreatedPotion.GetComponent<Rigidbody>().velocity = ThrowPoint.transform.up * throwPower;
+                timer = throwDelayTime;
+            }
+        } else timer -= Time.deltaTime;
     }
 }

@@ -74,7 +74,7 @@ public class RoomTemplates : MonoBehaviour
         //if the rooms are not already generated we want to check if there is still generation happening
         if(roomsGenerated == false){
         //get a room sample
-        if(waitTime == 1){
+        if(waitTime == 2    ){
             lengthRoomSample = rooms.Count;
         }
         //if the room sample after some time is the same as the current amount of rooms
@@ -85,7 +85,7 @@ public class RoomTemplates : MonoBehaviour
             roomsGenerated = true;
             lengthRoomSample = 0;
             }
-            waitTime = 1;
+            waitTime = 2;
             //remove time for the wait time if the waittime is not 0
             } else { waitTime -= Time.deltaTime;}
         }
