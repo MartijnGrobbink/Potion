@@ -372,8 +372,8 @@ MonoBehaviour:
     m_Bits: 128
   animator: {fileID: 0}
   healthBar: {fileID: 4688346842005199964}
-  maxhealth: 500
-  health: 500
+  maxhealth: 100
+  health: 100
   attackdamage: 0
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
