@@ -94,7 +94,7 @@ public class EnemyAI : MonoBehaviour
     private void AttackPlayer()
     {
         //Adding the attack
-
+        animator.SetTrigger("Attack");
         //Making sure that the enemy doesn't move while attacking
         agent.SetDestination(transform.position);
 
