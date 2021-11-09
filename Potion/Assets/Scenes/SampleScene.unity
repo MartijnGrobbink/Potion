@@ -982,7 +982,7 @@ MonoBehaviour:
   rooms: []
   waitTime: 1
   boss: {fileID: 5799415128705247084, guid: 9fde8946abec606418385ef7986e9dc6, type: 3}
-  minRooms: 0
+  minRooms: 10
   reset: 0
   roomsGenerated: 0
 --- !u!4 &2074857548
